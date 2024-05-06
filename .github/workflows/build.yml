@@ -24,6 +24,9 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
+env:
+  BASE_PATH: '/iwf'
+
 jobs:
   # Build job
   build:
@@ -72,10 +75,6 @@ jobs:
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-
-      - name: Set and Retrieve Github ENV variables
-        shell: bash
-        run: echo "BASE_PATH=${{ env.BASE_PATH }}" >> $GITHUB_ENV
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
