@@ -32,6 +32,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+      - name: TEST
+        shell: bash
+        run: echo "BASE_PATH=${{ env.BASE_PATH }}"
+
       - name: Checkout
         uses: actions/checkout@v4
 
