@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   output: 'export',
+  basePath: process.env.BASE_PATH || '',
   optimizeFonts: false,
   webpack(config) {
     config.module.rules.forEach((rule) => {
