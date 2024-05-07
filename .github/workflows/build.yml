@@ -24,8 +24,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
-# env:
-#   BASE_PATH: ${{ vars.BASE_PATH }}
+env:
+  BASE_PATH: ${{ vars.BASE_PATH }}
 
 jobs:
   # Build job
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: ENVVARS
+      - name: Repository VARS
         shell: bash
         run: echo ${{ toJson(vars) }}
 
