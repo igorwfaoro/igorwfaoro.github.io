@@ -26,6 +26,7 @@ concurrency:
 
 env:
   BASE_PATH: ${{ vars.BASE_PATH }}
+  SITE_URL: ${{ vars.SITE_URL }}
 
 jobs:
   # Build job
