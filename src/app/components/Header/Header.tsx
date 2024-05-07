@@ -1,3 +1,5 @@
+import Heading from '../../../components/Heading/Heading';
+
 interface HeaderProps {}
 
 const items = [
@@ -17,7 +19,7 @@ export default function Header({}: HeaderProps) {
       />
 
       <div className="space-y-4 text-center sm:text-left">
-        <h1 className="text-3xl font-bold">Igor Wilian Faoro</h1>
+        <Heading.H1>Igor Wilian Faoro</Heading.H1>
 
         <ul>
           {items.map((it) => (

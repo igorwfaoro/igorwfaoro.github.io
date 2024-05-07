@@ -1,6 +1,8 @@
 import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Projects from './components/Projects/Projects';
 
 export default async function Home() {
   return (
@@ -9,6 +11,8 @@ export default async function Home() {
         <Header />
         <AboutMe />
         <Contact />
+        <Projects />
+        <Footer />
       </div>
     </main>
   );
