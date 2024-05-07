@@ -24,8 +24,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
-env:
-  BASE_PATH: '/iwf'
+# env:
+#   BASE_PATH: '/iwf'
 
 jobs:
   # Build job
