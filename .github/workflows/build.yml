@@ -35,7 +35,7 @@ jobs:
 
       - name: Repository VARS
         shell: bash
-        run: echo "${{ toJson(vars) }}""
+        run: echo "${{ vars.BASE_PATH }}""
 
       - name: Checkout
         uses: actions/checkout@v4
