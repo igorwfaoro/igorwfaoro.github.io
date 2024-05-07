@@ -24,8 +24,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
-# env:
-#   BASE_PATH: '/iwf'
+env:
+  BASE_PATH: ${{ vars.BASE_PATH }}
 
 jobs:
   # Build job
@@ -35,7 +35,7 @@ jobs:
 
       - name: TEST
         shell: bash
-        run: echo "BASE_PATH=${{ vars.BASE_PATH }}"
+        run: echo "BASE_PATH=$BASE_PATH"
 
       - name: Checkout
         uses: actions/checkout@v4
