@@ -11,7 +11,7 @@ export default function Header({}: HeaderProps) {
   return (
     <header className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
       <img
-        src="/images/profile.jpg"
+        src="images/profile.jpg"
         alt="Profile Picture"
         className="rounded-full h-36 w-36"
       />
