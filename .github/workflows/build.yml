@@ -35,7 +35,7 @@ jobs:
 
       - name: Repository VARS
         shell: bash
-        run: echo ${{ toJson(vars) }}
+        run: echo "${{ toJson(vars) }}""
 
       - name: Checkout
         uses: actions/checkout@v4
