@@ -35,7 +35,7 @@ jobs:
 
       - name: TEST
         shell: bash
-        run: echo "BASE_PATH=${{ env.BASE_PATH }}"
+        run: echo "BASE_PATH=${{ vars.BASE_PATH }}"
 
       - name: Checkout
         uses: actions/checkout@v4
