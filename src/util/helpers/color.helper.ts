@@ -25,3 +25,5 @@ const luminance = (r: number, g: number, b: number) => {
   });
   return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
 };
+
+export const removeHash = (color: string) => color.replace('#', '');

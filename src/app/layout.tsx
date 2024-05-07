@@ -1,4 +1,3 @@
-// import { GoogleAnalytics } from '@next/third-parties/google';
 import dayjs from 'dayjs';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
@@ -9,16 +8,16 @@ import { locale } from '../util/locale';
 import Loading from './loading';
 
 const meta = {
-  title: 'Estasiare | Construindo momentos mágicos!',
+  title: 'Igor Wilian Faoro | Software Developer',
   description:
-    'Acreditamos que cada momento especial merece ser celebrado de forma única e inesquecível. Com nossa plataforma intuitiva e flexível, você pode criar o evento dos seus sonhos, seja um casamento mágico, um aniversário emocionante ou qualquer ocasião especial que mereça ser comemorada.',
-  image: '/images/logo-profile.png'
+    "I am a full-stack developer with experience in various technologies, including Node.js, Angular, React, .Net, and Java. With strong skills in both backend and frontend development, I have the ability to create robust and scalable solutions to meet clients' needs. I have a problem-solving mindset and am always seeking to learn new technologies and improve my skills.",
+  image: '/images/profile.jpg'
 };
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  // metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
+  metadataBase: new URL(process.env.SITE_URL),
   robots: 'index',
   themeColor: COLORS.primary,
   openGraph: {
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     description: meta.description,
     images: meta.image,
     type: 'website',
-    siteName: `Estasiare`
+    siteName: `Igor Wilian Faoro`
   },
   twitter: {
     title: meta.title,
@@ -38,8 +37,6 @@ export const metadata: Metadata = {
 
 dayjs.locale(locale.id);
 
-// const { NEXT_PUBLIC_GTAG: GTAG } = process.env;
-
 interface RootLayoutProps {
   children: ReactNode;
 }
@@ -49,7 +46,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang={locale.id}>
       <body>
         <Suspense fallback={<Loading />}>{children}</Suspense>
-        {/* <GoogleAnalytics gaId={GTAG} /> */}
       </body>
     </html>
   );
