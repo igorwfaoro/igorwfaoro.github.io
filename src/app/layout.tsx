@@ -44,7 +44,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={locale.id}>
-      <body className='bg-slate-900 text-white'>
+      <body className="bg-slate-900 text-white h-screen">
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </body>
     </html>
