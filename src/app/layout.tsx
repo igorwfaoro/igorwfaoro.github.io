@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
 
-import { clarity } from 'react-microsoft-clarity';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import '../styles/globals.scss';
 import { COLORS } from '../util/colors';
 import { locale } from '../util/locale';
@@ -37,7 +37,6 @@ export const metadata: Metadata = {
 };
 
 dayjs.locale(locale.id);
-clarity.init('m8l62p2ppa');
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -46,8 +45,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={locale.id}>
+      <head></head>
       <body className="bg-slate-900 text-white h-screen">
         <Suspense fallback={<Loading />}>{children}</Suspense>
+        <GoogleAnalytics gaId={process.env.GTAG} />
       </body>
     </html>
   );
