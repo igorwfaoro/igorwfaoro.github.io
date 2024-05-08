@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
 
+import { clarity } from 'react-microsoft-clarity';
 import '../styles/globals.scss';
 import { COLORS } from '../util/colors';
 import { locale } from '../util/locale';
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
 };
 
 dayjs.locale(locale.id);
+clarity.init('m8l62p2ppa');
 
 interface RootLayoutProps {
   children: ReactNode;
