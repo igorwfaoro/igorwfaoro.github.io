@@ -27,6 +27,7 @@ concurrency:
 env:
   BASE_PATH: ${{ vars.BASE_PATH }}
   SITE_URL: ${{ vars.SITE_URL }}
+  GTAG: ${{ vars.GTAG }}
 
 jobs:
   # Build job
