@@ -44,9 +44,9 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang={locale.id}>
+    <html lang={locale.id} className='bg-slate-900'>
       <head></head>
-      <body className="bg-slate-900 text-white h-screen">
+      <body className="text-white h-screen">
         <Suspense fallback={<Loading />}>{children}</Suspense>
         <GoogleAnalytics gaId={process.env.GTAG} />
       </body>
