@@ -20,6 +20,13 @@ const projects: Project[] = [
     link: 'https://www.estasiare.com.br'
   },
   {
+    title: 'Cartão Natal',
+    description:
+      'Cartão Natal is an innovative platform that allows users to create personalized Christmas cards. With customizable themes, messages, and even music options, Cartão Natal makes it easy to share festive sentiments in a unique and creative way.',
+    image: 'https://cartaonatal.com/images/print-screen-home.jpg',
+    link: 'https://cartaonatal.com'
+  },
+  {
     title: 'Repy: Delivery Management System',
     description:
       'Repy is a dynamic delivery management system designed to put complete control over deliveries, orders, and inventory at your fingertips. With features including a dedicated courier app and customer tracking links, Repy streamlines the entire delivery process, ensuring efficient and transparent operations. This platform is an ideal solution for businesses looking to enhance their delivery services and customer satisfaction.',
