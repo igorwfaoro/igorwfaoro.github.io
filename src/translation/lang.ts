@@ -21,7 +21,7 @@ const langMap: Record<string, keyof typeof langs> = {
   pt: 'pt-br'
 };
 
-const rawLang = 'pt-br'//(navigator?.language ?? FALLBACK_LANG).toLowerCase();
+const rawLang = (navigator?.language ?? FALLBACK_LANG).toLowerCase();
 const exact = langs[rawLang];
 
 export const lang =
