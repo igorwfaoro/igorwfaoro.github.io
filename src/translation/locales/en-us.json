@@ -1,0 +1,33 @@
+{
+  "aboutCompany.buttonViewMore": "pristen.com.br",
+  "aboutCompany.descriptionParagraphs": [
+    "Pristen is a software company I co-founded to deliver fast, custom-built digital solutions.",
+    "We work with companies that need to move quickly, solve real problems, and integrate tech into their processes without unnecessary complexity.",
+    "Our focus is on automation, system integration, and building tools that fit the way each business operates."
+  ],
+  "aboutMe.descriptionParagraphs": [
+    "I'm a senior full-stack developer working across backend and frontend, with experience building scalable and reliable systems.",
+    "I've worked with technologies like Node.js, (React, Next.js, TypeScript, Angular), C#, Java and PHP to solve real-world challenges and improve performance.",
+    "Currently, I contribute to core systems at Leroy Merlin and co-founded Pristen, where we build fast, custom digital solutions, from automation tools to full platforms."
+  ],
+  "aboutMe.title": "About Me",
+  "footer.projectExplanation.description": "This {{repoLink}} was built using Next.js with Static Export, chosen to streamline and simplify the development process. The project was deployed on GitHub Pages, and the entire deployment process is automated using GitHub Actions, ensuring a smooth and continuous delivery pipeline.",
+  "footer.projectExplanation.link": "presentation project",
+  "header.contact.title": "Contact",
+  "header.items": [
+    "📍 Caxias do Sul - RS, Brazil",
+    "💻 Software Developer",
+    "🤠 Country Music",
+    "🏞️ Outdoor Adventurer"
+  ],
+  "header.title": "Igor Wilian Faoro",
+  "howICanHelp.items": [
+    "✅ Build custom tools or automation fast",
+    "✅ Connect and integrate different systems (APIs, ERPs, CRMs)",
+    "✅ Validate MVPs or ideas quickly, without heavy processes",
+    "✅ Improve performance and stability in existing software",
+    "✅ Structure scalable backends and clean service architectures"
+  ],
+  "howICanHelp.sub": "I work with businesses and teams that need to:",
+  "howICanHelp.title": "How I can help"
+}

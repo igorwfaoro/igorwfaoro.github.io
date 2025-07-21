@@ -1,8 +1,8 @@
+@use './font.scss' as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './font.scss';
 
 html {
   scroll-behavior: smooth;

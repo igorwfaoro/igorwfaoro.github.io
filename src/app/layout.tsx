@@ -2,25 +2,24 @@ import dayjs from 'dayjs';
 import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
 
+import { CONFIG } from '@/core/config';
+import '@/styles/globals.scss';
+import { lang } from '@/translation/lang';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import '../styles/globals.scss';
-import { COLORS } from '../util/colors';
-import { locale } from '../util/locale';
 import Loading from './loading';
 
 const meta = {
   title: 'Igor Wilian Faoro | Software Developer',
   description:
-    "I am a full-stack developer with experience in various technologies, including Node.js, Angular, React, .Net, and Java. With strong skills in both backend and frontend development, I have the ability to create robust and scalable solutions to meet clients' needs. I have a problem-solving mindset and am always seeking to learn new technologies and improve my skills.",
+    'Senior Full-Stack Developer | Node.js, React.js, Next.js, TypeScript, Angular, C#, Java',
   image: '/images/profile.jpg'
 };
 
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
-  metadataBase: new URL(process.env.SITE_URL),
+  metadataBase: new URL(CONFIG.siteUrl),
   robots: 'index',
-  themeColor: COLORS.primary,
   openGraph: {
     title: meta.title,
     description: meta.description,
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   }
 };
 
-dayjs.locale(locale.id);
+dayjs.locale(lang.key);
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -44,11 +43,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang={locale.id} className='bg-slate-900'>
+    <html lang={lang.key} className="bg-slate-900">
       <head></head>
       <body className="text-white h-screen">
         <Suspense fallback={<Loading />}>{children}</Suspense>
-        <GoogleAnalytics gaId={process.env.GTAG} />
+        <GoogleAnalytics gaId={CONFIG.google.gtag} />
       </body>
     </html>
   );

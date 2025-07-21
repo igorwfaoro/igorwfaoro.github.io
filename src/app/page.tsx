@@ -1,19 +1,30 @@
-import AboutMe from './components/AboutMe/AboutMe';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Projects from './components/Projects/Projects';
+import AboutCompany from '@/app/components/AboutCompany';
+import HowICanHelp from '@/app/components/HowICanHelp';
+import TranslationProvider from '@/translation/contexts/TranslationContext';
+import AboutMe from './components/AboutMe';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Divider from '@/components/Divider/Divider';
 
-export default async function Home() {
+async function Home() {
   return (
     <main className="p-6 flex justify-center">
       <div className="w-full max-w-[600px] space-y-6">
         <Header />
         <AboutMe />
-        <Contact />
-        <Projects />
+        <AboutCompany />
+        <HowICanHelp />
+        <Divider />
         <Footer />
       </div>
     </main>
+  );
+}
+
+export default function WithTranslation() {
+  return (
+    <TranslationProvider>
+      <Home />
+    </TranslationProvider>
   );
 }
