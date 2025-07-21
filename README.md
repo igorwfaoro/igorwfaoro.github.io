@@ -6,6 +6,8 @@
 🏞️ Outdoor Adventurer<br>
 
 ## About Me
-I am a full-stack developer with experience in various technologies, including Node.js, Angular, React, .Net, and Java. With strong skills in both backend and frontend development, I have the ability to create robust and scalable solutions to meet clients' needs. I have a problem-solving mindset and am always seeking to learn new technologies and improve my skills.
+I'm a senior full-stack developer working across backend and frontend, with experience building scalable and reliable systems.
+I've worked with technologies like Node.js, (React, Next.js, TypeScript, Angular), C#, Java and PHP to solve real-world challenges and improve performance.
+Currently, I contribute to core systems at Leroy Merlin and co-founded Pristen, where we build fast, custom digital solutions, from automation tools to full platforms.
 
 https://igorwfaoro.github.io
