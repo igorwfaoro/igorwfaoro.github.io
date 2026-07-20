@@ -6,9 +6,9 @@
     "Nosso foco está em automação, integração de sistemas e na criação de ferramentas que se encaixam na forma como cada negócio realmente funciona."
   ],
   "aboutMe.descriptionParagraphs": [
-    "Sou um desenvolvedor full-stack sênior, com experiência na construção de sistemas escaláveis e confiáveis.",
-    "Trabalho com tecnologias como Node.js, (React, Next.js, TypeScript, Angular), C#, Java e PHP para resolver desafios reais e melhorar a performance dos sistemas.",
-    "Atualmente contribuo para sistemas essenciais na Leroy Merlin e sou cofundador da Pristen, onde desenvolvemos soluções digitais rápidas e personalizadas. Desde ferramentas de automação a plataformas completas."
+    "Sou Tech Lead e desenvolvedor full-stack, focado em construir e evoluir produtos digitais confiáveis.",
+    "Trabalho na evolução de produtos e sistemas de negócio, unindo visão de produto com execução técnica.",
+    "Atuo em sustentação de operações críticas, integrações, automações e novas iniciativas. Também estruturo processos de desenvolvimento e lidero a incorporação de IA ao fluxo de trabalho do time, para aumentar a qualidade, a consistência e a velocidade das entregas."
   ],
   "aboutMe.title": "Sobre",
   "footer.projectExplanation.description": "Este {{repoLink}} foi construído usando Next.js com exportação estática, escolhida para simplificar e agilizar o processo de desenvolvimento. O projeto foi publicado no GitHub Pages, e todo o processo de deploy é automatizado com GitHub Actions, garantindo uma entrega contínua e fluida.",
