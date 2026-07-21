@@ -1,62 +1,62 @@
-'use client';
-
-import Heading from '@/components/Heading/Heading';
-import { useTranslation } from '@/translation/contexts/TranslationContext';
+import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { IconType } from 'react-icons';
+import { SiGmail } from 'react-icons/si';
 
 interface Item {
   href: string;
   label: string;
-  mainColor: string;
-  logo: string;
+  color: string;
+  Icon: IconType;
 }
 
 const items: Item[] = [
   {
     href: 'https://github.com/igorwfaoro',
     label: 'igorwfaoro',
-    logo: 'github',
-    mainColor: '#1C2128'.replace('#', '')
+    color: '#d9e3f1',
+    Icon: FaGithub
   },
   {
     href: 'https://www.linkedin.com/in/igorwfaoro',
     label: 'igorwfaoro',
-    logo: 'linkedin',
-    mainColor: '#0B63BD'.replace('#', '')
+    color: '#70a8ff',
+    Icon: FaLinkedinIn
   },
   {
     href: 'https://www.instagram.com/igorwfaoro',
     label: 'igorwfaoro',
-    logo: 'instagram',
-    mainColor: '#CB2770'.replace('#', '')
+    color: '#f273c2',
+    Icon: FaInstagram
   },
   {
     href: 'mailto:igor.faoro17@gmail.com',
     label: 'igor.faoro17@gmail.com',
-    logo: 'gmail',
-    mainColor: '#E02E23'.replace('#', '')
+    color: '#f27b73',
+    Icon: SiGmail
   },
   {
     href: 'https://wa.me/+5554996726664',
-    label: '+55_54_99672--6664',
-    logo: 'whatsapp',
-    mainColor: '#24CC63'.replace('#', '')
+    label: '+55 54 99672-6664',
+    color: '#78d990',
+    Icon: FaWhatsapp
   }
 ];
 
 export default function Contact() {
-  const { t } = useTranslation();
-
-  const buildImgLink = ({ label, mainColor, logo }: Item) =>
-    `https://img.shields.io/badge/${label}-${mainColor}?logo=${logo}&style=flat&logoColor=ffffff`;
-
   return (
-    <section className="space-y-4">
-      {/* <Heading.H3>{t('header.contact.title')}</Heading.H3> */}
-
-      <div className="flex gap-3 flex-wrap justify-center sm:justify-start">
-        {items.map((it) => (
-          <a key={it.href} href={it.href} target="_blank">
-            <img src={buildImgLink(it)} />
+    <section>
+      <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
+        {items.map(({ href, label, color, Icon }) => (
+          <a
+            key={href}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2.5 rounded-xl border bg-[#091625]/70 px-4 py-3 text-sm font-medium shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-[#10243a] focus:outline-none focus:ring-2 focus:ring-white/50"
+            style={{ borderColor: `${color}66`, color }}
+          >
+            <Icon className="h-5 w-5" aria-hidden="true" />
+            <span>{label}</span>
           </a>
         ))}
       </div>

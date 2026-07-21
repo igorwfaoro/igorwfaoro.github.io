@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { ReactNode, Suspense } from 'react';
 
 import { CONFIG } from '@/core/config';
+import '@/styles/tailwind.css';
 import '@/styles/globals.scss';
 import { lang } from '@/translation/lang';
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={lang.key} className="bg-slate-900">
       <head></head>
-      <body className="text-white h-screen">
+      <body className="min-h-screen text-white">
         <Suspense fallback={<Loading />}>{children}</Suspense>
         <GoogleAnalytics gaId={CONFIG.google.gtag} />
       </body>

@@ -1,6 +1,4 @@
-interface SpinnerProps {}
-
-export default function Spinner({}: SpinnerProps) {
+export default function Spinner() {
   return (
     <svg
       className="text-gray-300 animate-spin"

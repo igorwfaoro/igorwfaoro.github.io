@@ -1,11 +1,24 @@
 @use './font.scss' as *;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
   scroll-behavior: smooth;
+  background: #06111f;
+}
+
+body {
+  min-height: 100vh;
+  background: #06111f;
+  color: #e8eef9;
+}
+
+.site-background {
+  background-color: #06111f;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(47, 105, 200, 0.2), transparent 58%),
+    radial-gradient(circle at 85% 75%, rgba(15, 46, 88, 0.22), transparent 45%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
 }
 
 input[type='number'] {
@@ -22,15 +35,15 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #06111f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #29486f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #3e6b9f;
 }
 
 .no-select {

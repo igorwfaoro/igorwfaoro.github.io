@@ -72,3 +72,7 @@
 - Run the relevant validation before finishing work. Use `yarn build` whenever static-export behavior could be affected.
 - Before committing, inspect the intended diff and run the applicable checks.
 - The current project has no automated test suite. Do not claim tests were run unless a test command was actually added and executed.
+
+## Local Servers
+
+- Always stop every local application server started during a task before finishing. Never leave a development server or an open application port running in the background.

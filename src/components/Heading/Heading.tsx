@@ -11,11 +11,11 @@ export default function Heading({}: HeadingProps) {
 }
 
 Heading.H1 = function H1({ children, className }: HeadingProps) {
-  return <h1 className={twMerge('text-3xl font-bold', className)}>{children}</h1>;
+  return <h1 className={twMerge('text-3xl font-bold text-white', className)}>{children}</h1>;
 };
 
 Heading.H2 = function H2({ children, className }: HeadingProps) {
-  return <h2 className={twMerge('text-xl font-bold', className)}>{children}</h2>;
+  return <h2 className={twMerge('text-xl font-bold text-white', className)}>{children}</h2>;
 };
 
 Heading.H3 = function H3({ children, className }: HeadingProps) {

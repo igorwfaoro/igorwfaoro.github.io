@@ -2,7 +2,13 @@
 
 import Loading from '@/app/loading';
 import { lang } from '@/translation/lang';
-import { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState
+} from 'react';
 
 type Messages = Record<string, string | string[]>;
 
@@ -11,7 +17,7 @@ export interface ITranslationProvider {
 }
 
 interface TranslationProviderProps {
-  children: any;
+  children: ReactNode;
 }
 
 const TranslationContext = createContext<ITranslationProvider | undefined>(

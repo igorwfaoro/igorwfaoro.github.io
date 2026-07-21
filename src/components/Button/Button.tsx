@@ -4,7 +4,8 @@ import {
   ComponentProps,
   HTMLAttributeAnchorTarget
 } from 'react';
-import { VariantProps, tv } from 'tailwind-variants';
+import { IconType } from 'react-icons';
+import { twMerge } from 'tailwind-merge';
 
 export type ButtonTheme =
   | 'primary'
@@ -18,42 +19,30 @@ export type ButtonTheme =
 
 export type ButtonSize = 'normal' | 'small';
 
-const variants: {
-  theme: { [key in ButtonTheme]: string };
-  size: { [key in ButtonSize]: string };
-} = {
-  theme: {
-    primary: 'bg-primary text-white',
-    'primary-outline': 'bg-transparent text-primary border border-primary',
-    'white-outline': 'bg-transparent text-white border border-white',
-    secondary: 'bg-secondary text-white',
-    light: 'bg-neutral-100 text-neutral-950',
-    highlight: 'bg-highlight text-white',
-    danger: 'bg-red-600 text-white',
-    warning: 'bg-yellow-500 text-white'
-  },
-  size: {
-    small: 'px-2 py-1',
-    normal: 'px-4 py-3'
-  }
+const themeClasses: Record<ButtonTheme, string> = {
+  primary: 'bg-primary text-white',
+  'primary-outline': 'border border-primary bg-transparent text-primary',
+  'white-outline': 'border border-white bg-transparent text-white',
+  secondary: 'bg-secondary text-white',
+  light: 'bg-neutral-100 text-neutral-950',
+  highlight: 'bg-highlight text-white',
+  danger: 'bg-red-600 text-white',
+  warning: 'bg-yellow-500 text-white'
 };
 
-const button = tv({
-  base: 'block rounded-lg h-auto font-bold text-center uppercase shadow-sm transition-all ease-in-out hover:brightness-90 disabled:cursor-not-allowed disabled:border-none disabled:bg-gray-400 disabled:text-gray-300 [text-wrap:nowrap]',
-  variants,
-  defaultVariants: {
-    theme: 'primary',
-    size: 'normal'
-  }
-});
+const sizeClasses: Record<ButtonSize, string> = {
+  small: 'px-2 py-1',
+  normal: 'px-4 py-3'
+};
 
-type ButtonProps = ComponentProps<'button'> &
-  VariantProps<typeof button> & {
-    icon?: any;
-    href?: string;
-    target?: HTMLAttributeAnchorTarget;
-    color?: string;
-  };
+type ButtonProps = ComponentProps<'button'> & {
+  icon?: IconType;
+  href?: string;
+  target?: HTMLAttributeAnchorTarget;
+  color?: string;
+  theme?: ButtonTheme;
+  size?: ButtonSize;
+};
 
 export default function Button({
   children,
@@ -73,7 +62,12 @@ export default function Button({
     </>
   );
 
-  const buttonClasses = button({ theme, size, className });
+  const buttonClasses = twMerge(
+    'block h-auto rounded-lg text-center font-bold uppercase shadow-sm transition-all ease-in-out hover:brightness-90 disabled:cursor-not-allowed disabled:border-none disabled:bg-gray-400 disabled:text-gray-300 [text-wrap:nowrap]',
+    themeClasses[theme ?? 'primary'],
+    sizeClasses[size ?? 'normal'],
+    className
+  );
 
   const buttonStyle: CSSProperties = { ...style, backgroundColor: color };
 

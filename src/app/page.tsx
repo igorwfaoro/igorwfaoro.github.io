@@ -6,10 +6,10 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Divider from '@/components/Divider/Divider';
 
-async function Home() {
+function Home() {
   return (
-    <main className="p-6 flex justify-center">
-      <div className="w-full max-w-[600px] space-y-6">
+    <main className="site-background relative flex min-h-screen justify-center p-6">
+      <div className="relative w-full max-w-[600px] space-y-6">
         <Header />
         <AboutMe />
         <AboutCompany />

@@ -12,20 +12,22 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="text-center space-y-2">
-        <p className="text-sm italic">
+      <footer className="space-y-5 border-t border-[#52709a]/25 pt-9 text-center">
+        <p className="text-sm leading-6 text-slate-400">
           {projectExplanation[0]}
           <a
             href="https://github.com/igorwfaoro/igorwfaoro.github.io"
             target="_blank"
-            className="underline text-blue-500"
+            className="text-[#8dacff] underline decoration-[#8dacff]/40 underline-offset-4 transition hover:text-white"
           >
             {t('footer.projectExplanation.link')}
           </a>
           {projectExplanation[1]}
         </p>
 
-        <div>Igor Wilian Faoro | {dayjs().format('YYYY')}</div>
+        <div className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+          Igor Wilian Faoro | {dayjs().format('YYYY')}
+        </div>
       </footer>
     </>
   );
